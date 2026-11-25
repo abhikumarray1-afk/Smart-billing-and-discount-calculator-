@@ -1,0 +1,34 @@
+
+print("===== SMART BILL AND DISCOUNT CALCULATOR =====")
+
+# Taking input from user
+name = input("Enter customer name: ")
+price = float(input("Enter price of product: "))
+quantity = int(input("Enter quantity: "))
+
+# Calculate total bill
+total = price * quantity
+
+# Calculate discount
+if total >= 5000:
+    discount = total * 0.20
+elif total >= 3000:
+    discount = total * 0.15
+elif total >= 1000:
+    discount = total * 0.10
+else:
+    discount = 0
+
+# Calculate final amount
+final_bill = total - discount
+
+# Display bill
+print("\n========== CUSTOMER BILL ==========")
+print("Customer Name:", name)
+print("Price per item: Rs.", price)
+print("Quantity:", quantity)
+print("Total Amount: Rs.", total)
+print("Discount: Rs.", discount)
+print("Final Bill: Rs.", final_bill)
+print("===================================")
+print("Thank you for shopping!")
